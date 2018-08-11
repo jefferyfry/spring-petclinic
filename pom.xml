@@ -205,6 +205,14 @@
     </plugins>
   </build>
 
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>download-server-releases</name>
+        <url>http://34.238.112.64:8081/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
+
   <!-- Apache 2 license -->
   <licenses>
     <license>
