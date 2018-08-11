@@ -211,6 +211,11 @@
         <name>download-server-releases</name>
         <url>http://192.168.1.14:8081/artifactory/libs-release</url>
     </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>download-server-snapshots</name>
+        <url>http://192.168.1.14:8081/artifactory/libs-snapshot</url>
+    </snapshotRepository>
 </distributionManagement>
 
   <!-- Apache 2 license -->
