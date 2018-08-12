@@ -14,14 +14,11 @@ pipeline {
     }
     stage('Push to Repo') {
       steps {
-        sh 'mvn deploy'
+        configFileProvider(
+          [configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+          sh 'mvn -s $MAVEN_SETTINGS deploy'
+        }
       }
     }
-    /*stage('Deploy to Prod Server') {
-      agent { label 'vmware-prod' }
-      steps {
-        
-      }
-    }*/
   }
 }
